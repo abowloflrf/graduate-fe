@@ -1087,6 +1087,10 @@ crypto-browserify@^3.11.0:
     randombytes "^2.0.0"
     randomfill "^1.0.3"
 
+crypto-js@^3.1.9-1:
+  version "3.1.9-1"
+  resolved "http://registry.npm.taobao.org/crypto-js/download/crypto-js-3.1.9-1.tgz#fda19e761fc077e01ffbfdc6e9fdfc59e8806cd8"
+
 css-color-names@0.0.4:
   version "0.0.4"
   resolved "http://registry.npm.taobao.org/css-color-names/download/css-color-names-0.0.4.tgz#808adc2e79cf84738069b646cb20ec27beb629e0"
@@ -3811,6 +3815,10 @@ punycode@^1.2.4:
 q@^1.1.2:
   version "1.5.1"
   resolved "http://registry.npm.taobao.org/q/download/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
+
+qiniu-js@^2.2.2:
+  version "2.2.2"
+  resolved "http://registry.npm.taobao.org/qiniu-js/download/qiniu-js-2.2.2.tgz#1901f60207e5f0985c6dc73fb0ef0067fef1350d"
 
 qs@6.5.1:
   version "6.5.1"

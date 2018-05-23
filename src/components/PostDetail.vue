@@ -8,10 +8,15 @@
             <i>{{post.author_school}} {{post.author_level}}</i>
         </p>
         <hr>
+        <CommentForm></CommentForm>
     </div>
 </template>
 <script>
+import CommentForm from "./CommentForm.vue";
 export default {
+    components:{
+        CommentForm
+    },
     data() {
         return {
             id: this.$route.params.id,

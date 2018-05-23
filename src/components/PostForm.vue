@@ -1,7 +1,7 @@
 <template>
     <Form :model="formItem" :label-width="80">
         <FormItem>
-            <Upload></Upload>
+            <Upload v-on:upload-img="formItem.cover=$event"></Upload>
         </FormItem>
         <FormItem label="位置">
             <Input v-model="formItem.placeDetail" placeholder="这具体是哪里呢"></Input>
@@ -45,6 +45,7 @@ export default {
     data() {
         return {
             formItem: {
+                covor: "",
                 placeDetail: "",
                 content: "",
                 authorName: "",
@@ -78,6 +79,7 @@ export default {
     computed: {
         isValid: function() {
             return (
+                this.formItem.cover != "" &&
                 this.formItem.placeId != "" &&
                 this.formItem.placeDetail != "" &&
                 this.formItem.content != "" &&
