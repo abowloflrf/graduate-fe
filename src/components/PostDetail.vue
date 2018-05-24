@@ -1,7 +1,6 @@
 <template>
     <div v-if="post">
-        <img :src="post.cover" :style="{width:'100%'}">
-        <i>Post: {{ post.id }}</i>
+        <img :src="post.cover+'?imageView2/1/w/1200/h/900/format/jpg/q/85'" :style="{width:'100%'}">
         <h1>{{post.place_detail}}</h1>
         <p>{{post.content}}</p>
         <p>by {{post.author_name}}
@@ -9,12 +8,15 @@
         </p>
         <hr>
         <CommentForm></CommentForm>
+        <CommentList></CommentList>
     </div>
 </template>
 <script>
+import CommentList from "./CommentList.vue";
 import CommentForm from "./CommentForm.vue";
 export default {
-    components:{
+    components: {
+        CommentList,
         CommentForm
     },
     data() {
@@ -36,5 +38,9 @@ export default {
 };
 </script>
 <style scoped>
-
+hr {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #eee;
+}
 </style>
