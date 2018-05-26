@@ -4,7 +4,8 @@ import router from "./router";
 import axios from "axios";
 import iView from "iview";
 import "iview/dist/styles/iview.css";
-Vue.prototype.$axios=axios;
+import "./change.css";
+Vue.prototype.$axios = axios;
 Vue.use(iView);
 Vue.config.productionTip = false;
 

@@ -30,10 +30,6 @@ export default new Router({
             path: "/post/:id",
             name: "post",
             component: PostDetail
-        },
-        {
-            path: "*",
-            component: PostsShow
         }
     ]
 });

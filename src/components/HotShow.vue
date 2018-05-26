@@ -1,5 +1,9 @@
 <template>
     <div>
+        <div class="place-header">
+            <h1>{{place.place_brief}}</h1>
+            <p>{{place.place_description}}</p>
+        </div>
         <Timeline v-if="currentPosts.length!==0">
             <PostCard v-for="(p,index) in currentPosts" :post="p" :key="index"></PostCard>
         </Timeline>
@@ -13,6 +17,7 @@ export default {
     components: {
         PostCard
     },
+    props: ["place"],
     data() {
         return {
             currentPosts: []

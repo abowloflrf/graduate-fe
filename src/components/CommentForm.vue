@@ -7,8 +7,19 @@
             <FormItem prop="school" :style="{width:'31%'}">
                 <Select v-model="formItem.authorSchool" placeholder="学院">
                     <Option value="计通">计通</Option>
+                    <Option value="材料">材料</Option>
                     <Option value="机械">机械</Option>
+                    <Option value="数理">数理</Option>
                     <Option value="文法">文法</Option>
+                    <Option value="自动化">自动化</Option>
+                    <Option value="高工">高工</Option>
+                    <Option value="外院">外院</Option>
+                    <Option value="化生">化生</Option>
+                    <Option value="能环">能环</Option>
+                    <Option value="经管">经管</Option>
+                    <Option value="冶金">冶金</Option>
+                    <Option value="土资">土资</Option>
+                    <Option value="马克思">马克思</Option>
                 </Select>
             </FormItem>
             <FormItem prop="level" :style="{width:'31%'}">

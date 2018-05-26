@@ -1,0 +1,32 @@
+.ivu-layout-sider-trigger {
+    display: none;
+}
+.ivu-layout-sider-zero-width-trigger,
+.ivu-layout-sider-zero-width-trigger:hover {
+    top: -24px !important;
+    background: rgba(0, 129, 138, 0.5);
+}
+
+.ivu-layout,
+.ivu-layout-sider,
+.ivu-layout-footer {
+    background: none !important;
+}
+.ivu-layout-content,
+.ivu-menu-light {
+    background: rgba(255, 255, 255, 0.6) !important;
+}
+.ivu-menu-vertical.ivu-menu-light:after {
+    width: 0;
+}
+
+.ivu-menu-vertical .ivu-menu-item:hover,
+.ivu-menu-vertical .ivu-menu-submenu-title:hover {
+    background: rgba(153, 221, 204, 0.15);
+}
+
+.ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu),
+.ivu-timeline-item-head-blue {
+    color: #00818a;
+    border-color: #00818a;
+}
