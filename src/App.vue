@@ -73,7 +73,8 @@ export default {
         return {
             places: [],
             currentPosts: [],
-            isCollapsed: false
+            isCollapsed: false,
+            tempPlace: "0"
         };
     },
     methods: {
@@ -102,8 +103,17 @@ export default {
             return ["menu-item", this.isCollapsed ? "collapsed-menu" : ""];
         },
         currentPlace: function() {
-            if (this.$route.path === "/hot") return "0";
-            return this.$route.params.pid + "";
+            if (this.$route.name === "hot") {
+                this.tempPlace = "0";
+                return "0";
+            }
+            if (this.$route.name === "place") {
+                this.tempPlace = this.$route.params.pid + "";
+                return this.$route.params.pid + "";
+            }
+            if (this.$route.name === "post") {
+                return this.tempPlace;
+            }
         },
         currentPlaceDetail: function() {
             var p = {
@@ -134,18 +144,15 @@ export default {
                     return "/images/classroom-logo.png";
                     break;
                 case "4":
-                    return "/images/home-logo.png";
+                    return "/images/lib-logo.png";
                     break;
                 case "5":
-                    return "/images/home-logo.png";
+                    return "/images/canteen-logo.png";
                     break;
                 case "6":
-                    return "/images/home-logo.png";
+                    return "/images/gardon-logo.png";
                     break;
                 case "7":
-                    return "/images/home-logo.png";
-                    break;
-                case "8":
                     return "/images/home-logo.png";
                     break;
                 default:
