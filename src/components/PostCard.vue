@@ -25,7 +25,7 @@ export default {
             this.$router.push({ name: "post", params: { id } });
         },
         vote: function() {
-            if (this.isVoted) return false;
+            if (this.isVoted || this.tempRed) return false;
             this.$axios
                 .post("/api/post/" + this.postid + "/vote", {})
                 .then(response => {

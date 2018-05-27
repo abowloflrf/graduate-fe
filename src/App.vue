@@ -19,8 +19,6 @@
                             <Sider breakpoint="xs" collapsible :collapsed-width="78" v-model="isCollapsed" :width="160">
                                 <Menu :active-name="currentPlace" theme="light" width="auto" :open-names="['0']" :style="{height:'100%'}" :class="menuitemClasses">
                                     <MenuItem name="0" @click.native="changePlace(0)">
-                                    <!-- <img class="menu-icon" src="./assets/7-icon.png"> -->
-                                    <!-- <Icon type="ios-navigate"></Icon> -->
                                     <span style="font-weight:800;font-size:18px;">热门</span>
                                     </MenuItem>
 
@@ -86,6 +84,7 @@ export default {
                 this.$router.push("/place/" + id);
             }
             this.fetchPosts(id);
+            this.isCollapsed = false;
         },
         fetchPosts: function(placeid) {
             var fetchUrl = "/api/place/" + placeid + "/posts";
@@ -181,7 +180,7 @@ export default {
     position: relative;
     top: -20px;
 }
-.ivu-layout-content{
+.ivu-layout-content {
     padding: 24px;
 }
 .content-header {

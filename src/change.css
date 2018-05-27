@@ -3,7 +3,7 @@
 }
 .ivu-layout-sider-zero-width-trigger,
 .ivu-layout-sider-zero-width-trigger:hover {
-    top: -24px !important;
+    top: 0px !important;
     background: rgba(0, 129, 138, 0.5);
 }
 
